@@ -35,7 +35,7 @@ header {
   font-size: 16px;
 }
 .header-search > .search-input {
-  background-image: url("assets/icons/search_grey.svg");
+  background-image: url("./../assets/icons/search_grey.svg");
   background-repeat: no-repeat;
   background-position: 10px 10px;
   border-radius: 8px 0 0 8px;
@@ -136,3 +136,24 @@ main {
 }
 
 /******************************* EVENTS *******************************/
+
+.events-near {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.events-near__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: (2, 1fr);
+  gap: 36px;
+}
+.event {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.event > img {
+  width: 272px;
+  height: 153px;
+}
