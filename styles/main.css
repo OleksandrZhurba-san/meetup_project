@@ -1,3 +1,4 @@
+/******************************* FOOTER *******************************/
 * {
   margin: 0px;
   padding: 0px;
@@ -79,6 +80,34 @@ header {
 .singUp {
   color: white;
   background-color: #00798a;
+  border-radius: 8px;
+  padding: 8px 15px;
+}
+/******************************* MAIN *******************************/
+main {
+  max-width: 1196px;
+  margin: 0 auto;
+}
+.thumbnail {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 46px;
+  padding-top: 69px;
+}
+.content > h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 52px;
+}
+.content > p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 24px 0px 24px;
+}
+.content > button {
+  background-color: #00798a;
+  color: white;
   border-radius: 8px;
   padding: 8px 15px;
 }
