@@ -240,3 +240,44 @@ main {
   font-weight: 600;
   line-height: 24px;
 }
+
+/******************************* JOIN BANNER *******************************/
+.join-banner {
+  display: flex;
+  border-radius: 8px;
+  gap: 74px;
+  padding: 20px 56px;
+  background-color: rgba(151, 202, 209, 0.08);
+}
+.join-banner__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.join-banner__content > h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+}
+.join-banner__content > p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 664px;
+}
+.join-banner__content > button {
+  width: 192px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e32359;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.join-banner > img {
+  width: 341px;
+  height: 196px;
+}
