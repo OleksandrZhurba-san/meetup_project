@@ -47,10 +47,38 @@ header {
   color: black;
 }
 .header-search > button {
+  font-size: 20px;
+  font-weight: 500;
   background-color: #f65858;
   border: none;
   border-radius: 0px 8px 8px 0px;
   cursor: pointer;
   width: 42px;
   height: 42px;
+}
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+.login-section > button {
+  border: none;
+  height: 36px;
+}
+.language {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.logIn {
+  background-color: white;
+}
+.singUp {
+  color: white;
+  background-color: #00798a;
+  border-radius: 8px;
+  padding: 8px 15px;
 }
