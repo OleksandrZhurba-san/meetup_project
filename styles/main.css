@@ -105,14 +105,15 @@ main {
   justify-content: start;
   align-items: center;
   gap: 46px;
-  padding-top: 69px;
+  padding-top: 70px;
+  padding-bottom: 35px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 600px;
+  max-width: 580px;
 }
 .content > h1 {
   font-size: 42px;
@@ -137,26 +138,26 @@ main {
 
 /******************************* EVENTS *******************************/
 
-.events-near {
+.events {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-.events-near__header {
+.events__header {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 16px;
 }
-.events-near__header > h2 {
+.events__header > h2 {
   font-size: 28px;
   font-weight: 600;
   line-height: 36px;
 }
-.events-near__input {
+.events__input {
   position: relative;
 }
-.events-near__search {
+.events__search {
   padding: 12px 0 8px 12px;
   background-color: rgba(151, 202, 209, 0.12);
   border: none;
@@ -168,17 +169,17 @@ main {
   background-repeat: no-repeat;
   background-position: 10px 10px; */
 }
-.events-near__input > img {
+.events__input > img {
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
 }
-.events-near__header > input::placeholder {
+.events__header > input::placeholder {
   color: #00798a;
 }
-.events-near__all-events-button {
+.events__all-events-button {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -187,7 +188,7 @@ main {
   background-color: white;
   color: #00798a;
 }
-.events-near__grid {
+.events__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: (2, 1fr);
@@ -197,6 +198,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 272px;
+  height: 399px;
 }
 .event > img {
   width: 272px;
