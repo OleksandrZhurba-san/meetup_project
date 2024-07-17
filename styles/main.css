@@ -66,6 +66,8 @@ header {
 .login-section > button {
   border: none;
   height: 36px;
+  font-weight: 500;
+  font-size: 14px;
 }
 .language {
   background-color: white;
@@ -95,6 +97,13 @@ main {
   gap: 46px;
   padding-top: 69px;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+}
 .content > h1 {
   font-size: 42px;
   font-weight: 700;
@@ -103,11 +112,14 @@ main {
 .content > p {
   font-size: 16px;
   line-height: 24px;
-  margin: 24px 0px 24px;
 }
 .content > button {
   background-color: #00798a;
   color: white;
+  border: none;
   border-radius: 8px;
   padding: 8px 15px;
+  font-weight: 500;
+  width: 125px;
+  height: 40px;
 }
