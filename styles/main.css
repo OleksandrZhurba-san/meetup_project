@@ -363,6 +363,11 @@ main {
   flex-direction: column;
   gap: 24px;
 }
+.how-works > h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+}
 
 .how-works__actions {
   display: flex;
