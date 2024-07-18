@@ -13,6 +13,17 @@ a {
   text-decoration: none;
   color: #00798a;
 }
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
 /******************************* HEADER *******************************/
 
 header {
@@ -125,10 +136,6 @@ main {
   font-weight: 700;
   line-height: 52px;
 }
-.content > p {
-  font-size: 16px;
-  line-height: 24px;
-}
 .content > button {
   font-size: 16px;
   font-weight: 400;
@@ -153,11 +160,6 @@ main {
   justify-content: start;
   align-items: center;
   gap: 16px;
-}
-.events__header > h2 {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 36px;
 }
 .events__input {
   position: relative;
@@ -260,15 +262,7 @@ main {
   justify-content: center;
   gap: 16px;
 }
-.join-banner__content > h2 {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 36px;
-}
 .join-banner__content > p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
   max-width: 664px;
 }
 .join-banner__content > button {
@@ -293,11 +287,6 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 24px;
-}
-.categories > h2 {
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 36px;
 }
 .categories__list {
   display: flex;
@@ -325,14 +314,7 @@ main {
   flex-direction: column;
   gap: 16px;
 }
-.popular-cities > h2 {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 36px;
-}
 .popular-cities > p {
-  font-size: 16px;
-  line-height: 24px;
   color: #707070;
 }
 .popular-cities__list {
@@ -363,12 +345,6 @@ main {
   flex-direction: column;
   gap: 24px;
 }
-.how-works > h2 {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 36px;
-}
-
 .how-works__actions {
   display: flex;
   justify-content: space-between;
@@ -397,4 +373,42 @@ main {
   font-weight: 600;
   line-height: 24px;
   color: #212121;
+}
+
+/******************************* FRIENDSHIPS *****************************/
+.friendships {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.friendships__description {
+  max-width: 893px;
+}
+.friendships p {
+  color: #707070;
+}
+.friendships__cards {
+  display: flex;
+  gap: 32px;
+  margin-top: 12px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-basis: 376px;
+}
+.card > img {
+  width: 376px;
+  height: 191px;
+}
+.card > h3 {
+  margin-top: 12px;
+  max-width: 320px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.card > a {
+  margin-top: 4px;
 }
