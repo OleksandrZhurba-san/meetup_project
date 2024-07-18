@@ -4,9 +4,14 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  font-size: 16px;
 }
 button {
   cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #00798a;
 }
 /******************************* HEADER *******************************/
 
@@ -49,7 +54,7 @@ header {
   flex-basis: 254px;
 }
 .header-search > .city-input::placeholder {
-  color: black;
+  color: #212121;
 }
 .header-search > button {
   display: flex;
@@ -235,7 +240,7 @@ main {
   gap: 2px;
 }
 .event__content > h3 {
-  color: black;
+  color: #212121;
   font-size: 24px;
   font-weight: 600;
   line-height: 24px;
@@ -315,3 +320,76 @@ main {
 }
 
 /******************************* POPULAR CITIES *******************************/
+.popular-cities {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.popular-cities > h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+}
+.popular-cities > p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #707070;
+}
+.popular-cities__list {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  gap: 42px;
+}
+.city {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.city > img {
+  width: 205px;
+  height: 205px;
+}
+.city > p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+/******************************* HOW WORKS ******************************/
+.how-works {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.how-works__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+.actions-info {
+  display: flex;
+  gap: 24px;
+  padding: 32px 112px 32px 24px;
+  background-color: rgba(151, 202, 209, 0.08);
+  border-radius: 8px;
+  max-width: 580px;
+}
+.actions-info > img {
+  width: 41px;
+  height: 41px;
+}
+.events__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.events__content > h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #212121;
+}
