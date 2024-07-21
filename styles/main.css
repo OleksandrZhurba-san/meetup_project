@@ -5,6 +5,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  transition: all 1s;
 }
 button {
   cursor: pointer;
@@ -26,7 +27,8 @@ p {
 ul {
   list-style: none;
 }
-
+@media screen and (max-width: 393px) {
+}
 /******************************* HEADER *******************************/
 
 header {
@@ -37,7 +39,12 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 11px 50px 0px 15px;
-  column-gap: 40px;
+  gap: 40px;
+}
+@media screen and (max-width: 1250px) {
+  header {
+    padding-right: 15px;
+  }
 }
 
 .header-search {
@@ -83,6 +90,24 @@ header {
   width: 42px;
   height: 42px;
 }
+
+@media screen and (max-width: 915px) {
+  header {
+    gap: 15px 40px;
+  }
+  .header-search {
+    order: 2;
+  }
+  .search-input,
+  .city-input {
+    flex-grow: 1;
+  }
+}
+@media screen and (max-width: 600px) {
+  .city-input {
+    display: none;
+  }
+}
 .login-section {
   display: flex;
   justify-content: center;
@@ -113,11 +138,12 @@ header {
 }
 /******************************* MAIN *******************************/
 main {
-  max-width: 1196px;
+  max-width: 1244px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 64px;
+  padding: 0px 24px 64px 24px;
 }
 .thumbnail {
   display: flex;
@@ -126,13 +152,19 @@ main {
   gap: 46px;
   padding-top: 70px;
   padding-bottom: 35px;
+  transition: all 1s;
 }
-
+@media screen and (max-width: 860px) {
+  .thumbnail {
+    flex-direction: column;
+  }
+}
 .content {
   display: flex;
   flex-direction: column;
   gap: 24px;
   max-width: 580px;
+  transition: all 1s;
 }
 .content > h1 {
   font-size: 42px;
@@ -199,10 +231,13 @@ main {
   color: #00798a;
 }
 .events__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: (2, 1fr);
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: (2, 1fr); */
   gap: 36px;
+  flex-wrap: wrap;
 }
 .event {
   display: flex;
