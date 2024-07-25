@@ -44,16 +44,19 @@ header {
   header {
     padding-right: 15px;
   }
-  .header-search {
-    order: 2;
-  }
   .search-input {
     flex-grow: 1;
   }
 }
-@media screen and (max-width: 393px) {
+
+@media screen and (max-width: 899px) {
+  .header-search {
+    order: 2;
+  }
+}
+@media screen and (max-width: 630px) {
   header {
-    padding: 4px 7px 30px 21px;
+    padding: 6px 12px;
   }
 }
 
@@ -110,9 +113,6 @@ header {
   header {
     gap: 15px 40px;
   }
-  .header-search {
-    order: 2;
-  }
   .search-input {
     flex-grow: 1;
   }
@@ -166,7 +166,7 @@ main {
   main {
     gap: 20px;
     max-width: 720px;
-    /* padding: 0px 130px 0px 130px; */
+    padding: 0px 16px;
   }
 }
 .thumbnail {
@@ -178,22 +178,27 @@ main {
   padding-bottom: 35px;
   transition: all 0.3s;
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 960px) {
+  /* .thumbnail {
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+  .banner > img {
+    width: 215px;
+  }
+}
+@media screen and (max-width: 630px) {
   .thumbnail {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-}
-@media screen and (max-width: 500px) {
-  .thumbnail {
     padding-top: 10px;
     padding-bottom: 5px;
     gap: 10px;
   }
-  .banner > img {
+  /* .banner > img {
     width: 215px;
-  }
+  } */
 }
 .content {
   display: flex;
@@ -202,7 +207,7 @@ main {
   max-width: 580px;
   transition: all 1s;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 630px) {
   .content {
     gap: 20px;
   }
@@ -245,8 +250,6 @@ main {
   gap: 24px;
 }
 
-@media screen and (max-width: 1250px) {
-}
 .events__header {
   display: flex;
   justify-content: start;
@@ -255,6 +258,7 @@ main {
 }
 @media screen and (max-width: 630px) {
   .events__header {
+    margin-top: 30px;
     gap: 4px;
   }
   .events__header > h2 {
@@ -273,6 +277,9 @@ main {
   }
 }
 .events__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 12px 0 8px 12px;
   background-color: rgba(151, 202, 209, 0.12);
   border: none;
@@ -285,7 +292,7 @@ main {
   background-position: 10px 10px; */
 }
 @media screen and (max-width: 630px) {
-  .events__input {
+  .events__search {
     font-size: 14px;
     line-height: 16px;
   }
@@ -340,6 +347,8 @@ main {
 @media screen and (max-width: 630px) {
   .event {
     flex-direction: row;
+    padding-top: 9px;
+    border-top: 1px solid #d9d9d9;
     width: 100%;
     height: auto;
     gap: 8px;
@@ -390,6 +399,12 @@ main {
 @media screen and (max-width: 630px) {
   .date {
     color: #707070;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .event__content img {
+    width: 12px;
+    height: 12px;
   }
 }
 .going {
@@ -401,6 +416,16 @@ main {
   display: flex;
   align-items: center;
   gap: 2px;
+}
+
+@media screen and (max-width: 630px) {
+  .event__content > div {
+    order: 4;
+  }
+  div > .cost,
+  .going {
+    font-size: 10px;
+  }
 }
 .event__content > h3 {
   color: #212121;
@@ -498,6 +523,16 @@ main {
   flex-wrap: wrap;
   gap: 16px;
 }
+@media screen and (max-width: 630px) {
+  .categories__list {
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+  .categories > h2 {
+    font-size: 20px;
+    line-height: 36px;
+  }
+}
 .category {
   width: 135px;
   height: 112px;
@@ -526,9 +561,22 @@ main {
 .popular-cities__list {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 12px;
   gap: 42px;
+}
+@media screen and (max-width: 1250px) {
+  .popular-cities__list {
+    gap: 12px;
+  }
+  .popular-cities > h2 {
+    font-size: 20px;
+    line-height: 36px;
+  }
+  .popular-cities > p {
+    font-size: 12px;
+  }
 }
 .city {
   display: flex;
@@ -539,6 +587,12 @@ main {
 .city > img {
   width: 205px;
   height: 205px;
+}
+@media screen and (max-width: 1250px) {
+  .city > img {
+    width: 100px;
+    height: 100px;
+  }
 }
 .city > p {
   font-size: 20px;
@@ -552,15 +606,20 @@ main {
   flex-direction: column;
   gap: 24px;
 }
-@media screen and (max-width: 630px) {
-  .how-works__actions {
-    flex-direction: column;
-  }
-}
 .how-works__actions {
   display: flex;
   justify-content: space-between;
   gap: 32px;
+}
+@media screen and (max-width: 960px) {
+  .how-works > h2 {
+    font-size: 20px;
+    line-height: 36px;
+  }
+  .how-works__actions {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .actions-info {
   display: flex;
@@ -570,9 +629,22 @@ main {
   border-radius: 8px;
   max-width: 580px;
 }
+
+@media screen and (max-width: 960px) {
+  .actions-info {
+    padding: 32px 24px;
+    width: 100%;
+  }
+}
 .actions-info > img {
   width: 41px;
   height: 41px;
+}
+@media screen and (max-width: 630px) {
+  .actions-info > img {
+    width: 25px;
+    height: 25px;
+  }
 }
 .events__content {
   display: flex;
@@ -586,6 +658,23 @@ main {
   line-height: 24px;
   color: #212121;
 }
+@media screen and (max-width: 630px) {
+  .events__content {
+    max-width: 225px;
+  }
+  .events__content > h3 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .events__content > p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .events__content > a {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
 
 /******************************* FRIENDSHIPS *****************************/
 .friendships {
@@ -598,6 +687,17 @@ main {
 }
 .friendships p {
   color: #707070;
+}
+@media screen and (max-width: 630px) {
+  .friendships > h2 {
+    font-size: 20px;
+    line-height: 36px;
+  }
+  .friendships p,
+  a {
+    font-size: 12px;
+    line-height: 23px;
+  }
 }
 .friendships__cards {
   display: flex;
@@ -615,6 +715,41 @@ main {
   width: 376px;
   height: 191px;
 }
+@media screen and (max-width: 1250px) {
+  .friendships__cards {
+    justify-content: space-between;
+  }
+  .card {
+    flex-basis: 272px;
+  }
+  .card > img {
+    width: 272px;
+    height: 138px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .card {
+    flex-basis: 172px;
+  }
+  .card > img {
+    width: 172px;
+    height: 87px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .friendships__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    /* align-items: center; */
+    max-width: 360px;
+  }
+  .card > img {
+    width: 360px;
+    height: 183px;
+  }
+}
 .card > h3 {
   margin-top: 12px;
   max-width: 320px;
@@ -626,6 +761,48 @@ main {
   margin-top: 4px;
 }
 
+/******************************* SIGN-UP *****************************/
+.sign-up {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .sign-up {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0px;
+    position: sticky;
+    bottom: 0px;
+  }
+  .sign-up > p {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .sign-up > a {
+    padding: 8px 12px;
+    text-align: center;
+    width: 237px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e32359;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .sign-up {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sign-up > a {
+    width: 100%;
+  }
+}
 /******************************* FOOTER *****************************/
 footer {
   max-width: 1512px;
