@@ -813,14 +813,18 @@ footer {
 }
 
 .footer-container {
-  padding-top: 16px;
+  padding: 16px;
   max-width: 1120px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-
+@media screen and (max-width: 1250px) {
+  .footer-container {
+    max-width: 960px;
+  }
+}
 .footer-container__header {
   display: flex;
   gap: 16px;
@@ -895,7 +899,7 @@ footer {
   font-size: 14px;
   color: #c5c4c4;
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 880px) {
   .terms-n-policy > ul {
     display: none;
   }
