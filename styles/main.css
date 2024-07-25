@@ -5,7 +5,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  transition: all 1s;
+  /* transition: all 1s; */
 }
 button {
   cursor: pointer;
@@ -27,8 +27,6 @@ p {
 ul {
   list-style: none;
 }
-@media screen and (max-width: 393px) {
-}
 /******************************* HEADER *******************************/
 
 header {
@@ -41,9 +39,15 @@ header {
   padding: 11px 50px 0px 15px;
   gap: 40px;
 }
+
 @media screen and (max-width: 1250px) {
   header {
     padding-right: 15px;
+  }
+}
+@media screen and (max-width: 393px) {
+  header {
+    padding: 4px 7px 30px 21px;
   }
 }
 
@@ -91,21 +95,20 @@ header {
   height: 42px;
 }
 
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 600px) {
+  .city-input {
+    display: none;
+  }
+}
+@media screen and (max-width: 495px) {
   header {
     gap: 15px 40px;
   }
   .header-search {
     order: 2;
   }
-  .search-input,
-  .city-input {
+  .search-input {
     flex-grow: 1;
-  }
-}
-@media screen and (max-width: 600px) {
-  .city-input {
-    display: none;
   }
 }
 .login-section {
@@ -145,6 +148,12 @@ main {
   gap: 64px;
   padding: 0px 24px 64px 24px;
 }
+@media screen and (max-width: 500px) {
+  main {
+    gap: 20px;
+    padding: 0px 7px 0px 21px;
+  }
+}
 .thumbnail {
   display: flex;
   justify-content: start;
@@ -152,11 +161,23 @@ main {
   gap: 46px;
   padding-top: 70px;
   padding-bottom: 35px;
-  transition: all 1s;
+  transition: all 0.3s;
 }
 @media screen and (max-width: 860px) {
   .thumbnail {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .thumbnail {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    gap: 10px;
+  }
+  .banner > img {
+    width: 215px;
   }
 }
 .content {
@@ -166,10 +187,23 @@ main {
   max-width: 580px;
   transition: all 1s;
 }
+@media screen and (max-width: 500px) {
+  .content {
+    gap: 20px;
+  }
+}
 .content > h1 {
   font-size: 42px;
   font-weight: 700;
   line-height: 52px;
+}
+
+@media screen and (max-width: 500px) {
+  .content > h1 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 31px;
+  }
 }
 .content > button {
   font-size: 16px;
@@ -181,6 +215,11 @@ main {
   padding: 8px 15px;
   width: 125px;
   height: 40px;
+}
+@media screen and (max-width: 500px) {
+  .content > button {
+    display: none;
+  }
 }
 
 /******************************* EVENTS *******************************/
@@ -328,6 +367,7 @@ main {
 }
 .categories__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 .category {
@@ -358,6 +398,7 @@ main {
 .popular-cities__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 12px;
   gap: 42px;
 }
@@ -427,6 +468,7 @@ main {
 }
 .friendships__cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 32px;
   margin-top: 12px;
 }
