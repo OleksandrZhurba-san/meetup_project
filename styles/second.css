@@ -9,9 +9,15 @@ iframe {
 .main {
   display: flex;
   max-width: 1244px;
+  min-height: calc(100vh - 547px);
   justify-content: space-between;
   margin: 0 auto;
   padding: 77px 16px 101px;
+}
+@media screen and (max-width: 600px) {
+  .main {
+    flex-direction: column;
+  }
 }
 .filter-container {
   display: flex;
@@ -68,6 +74,7 @@ select {
 .event > img {
   width: 159px;
   height: 89px;
+  border-radius: 8px;
 }
 .date {
   font-size: 14px;
@@ -90,6 +97,7 @@ select {
   color: #707070;
 }
 .attendees {
+  margin-top: 48px;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;

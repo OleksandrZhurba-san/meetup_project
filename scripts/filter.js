@@ -1,3 +1,104 @@
 import { eventsStore } from "./mockData.js";
 
-console.log(eventsStore);
+const events = eventsStore;
+const typeSelector = document.querySelector(".type-filter");
+const distanceSelector = document.querySelector(".distance-filter");
+const categorySelector = document.querySelector(".category-filter");
+
+function getUniqueDistance(events) {
+  const uniqueDistances = events.reduce((acc, event) => {
+    if (!acc.includes(event.distance)) {
+      acc.push(event.distance);
+    }
+    return acc;
+  }, []);
+  return uniqueDistances.sort((a, b) => a - b);
+}
+function getUniqueEventType(events) {
+  const uniqueEventType = events.reduce((acc, event) => {
+    if (!acc.includes(event.type)) {
+      acc.push(event.type);
+    }
+    return acc;
+  }, []);
+  return uniqueEventType.sort((a, b) => a.length - b.length);
+}
+function getUniqueCategory(events) {
+  const uniqueCategory = events.reduce((acc, event) => {
+    if (!acc.includes(event.category)) {
+      acc.push(event.category);
+    }
+    return acc;
+  }, []);
+  return uniqueCategory.sort();
+}
+function fillFilterOptions(selector, options) {
+  options.forEach((e) => {
+    const option = createOption(e);
+    selector.appendChild(option);
+  });
+}
+function createOption(option) {
+  const optionElement = document.createElement("option");
+  if (Number.isInteger(option)) {
+    optionElement.setAttribute("value", option);
+    optionElement.textContent = `${option} km`;
+    return optionElement;
+  }
+  optionElement.setAttribute("value", option);
+  optionElement.textContent = option;
+  return optionElement;
+}
+
+function formatDate(date) {
+  const weekDay = date.toLocaleDateString("en-US", { weekday: "short" });
+  const month = date.toLocaleDateString("en-US", { month: "short" });
+  const dayNumber = date.toLocaleDateString("en-US", { day: "numeric" });
+  const hours = date.toLocaleTimeString("en-US", {
+    timeZone: "UTC",
+    timeZoneName: "short",
+  });
+  return `${weekDay}, ${month} ${dayNumber} · ${hours}`;
+}
+
+function createEvent(event) {
+  const eventContainer = document.createElement("div");
+  eventContainer.classList.add("event");
+  const eventImg = document.createElement("img");
+  eventImg.setAttribute("src", event.image);
+  eventImg.setAttribute("alt", "event_img");
+  const eventContent = document.createElement("div");
+  eventContent.classList.add("event__content");
+  const date = document.createElement("p");
+  date.classList.add("date");
+  date.textContent = formatDate(event.date);
+  const eventTitle = document.createElement("h3");
+  eventTitle.textContent = event.title;
+  const eventDistance = document.createElement("p");
+  eventDistance.classList.add("distance");
+  eventDistance.textContent = `${event.category} (${event.distance} km)`;
+  if (event.attendees) {
+    const eventAttendees = document.createElement("p");
+    eventAttendees.classList.add("attendees");
+    eventAttendees.textContent = `${event.attendees} attendees`;
+    eventContent.append(date, eventTitle, eventDistance, eventAttendees);
+  } else {
+    eventContent.append(date, eventTitle, eventDistance);
+  }
+  eventContainer.append(eventImg, eventContent);
+  return eventContainer;
+}
+function renderEvent(events) {
+  const eventContainer = document.querySelector(".event-container");
+  events.forEach((e) => {
+    eventContainer.append(createEvent(e));
+  });
+}
+function filterEvent() {}
+
+fillFilterOptions(typeSelector, getUniqueEventType(events));
+fillFilterOptions(distanceSelector, getUniqueDistance(events));
+fillFilterOptions(categorySelector, getUniqueCategory(events));
+
+console.log(formatDate(events[0].date));
+renderEvent(events);
