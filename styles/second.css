@@ -1,0 +1,97 @@
+@import url(main.css);
+
+iframe {
+  width: 350px;
+  height: 285px;
+  border: 0px;
+  border-radius: 8px;
+}
+.main {
+  display: flex;
+  max-width: 1244px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 77px 16px 101px;
+}
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.filter-container > h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-bottom: 16px;
+}
+.filter-container > a {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  border-bottom: 4px solid #00798a;
+}
+.select-container {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 48px;
+}
+select {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 14px;
+  border: none;
+  border-radius: 40px;
+  background-color: #f6f7f8;
+  padding: 16px 40px 16px 16px;
+  appearance: none;
+  background-image: url("../assets/icons/second/caret-down.svg");
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center right 15px;
+}
+.event-container {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.event {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  border-top: 1px solid #d9d9d9;
+  width: 100%;
+  height: auto;
+}
+.event > img {
+  width: 159px;
+  height: 89px;
+}
+.date {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #7c6f50;
+}
+.event__content {
+  gap: 4px;
+}
+.event__content > h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.distance {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #707070;
+}
+.attendees {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #7c6f50;
+}

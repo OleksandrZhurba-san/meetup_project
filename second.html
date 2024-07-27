@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/second.css" />
+    <title>Meets</title>
+  </head>
+  <body>
+    <header>
+      <a href="./main.html"
+        ><img src="assets/images/meetup_logo.svg" alt="meetup_logo"
+      /></a>
+      <form class="header-search">
+        <input type="text" class="search-input" placeholder="Search events" />
+        <input type="text" class="city-input" placeholder="Mountain View, CA" />
+        <button>
+          <img src="assets/icons/search_button.svg" alt="search button" />
+        </button>
+      </form>
+      <div class="login-section">
+        <button class="language">
+          <img src="assets/images/earth.svg" alt="language" />English
+        </button>
+        <button class="logIn">Log in</button>
+        <button class="singUp">Sign up</button>
+      </div>
+    </header>
+    <section class="main">
+      <div class="filter-container">
+        <h1>Events near New York, NY</h1>
+        <a href="#">Events</a>
+        <div class="select-container">
+          <select name="type" class="type-filter">
+            <option value="any">Any type</option>
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+          </select>
+          <select name="distance" class="distance-filter">
+            <option value="any">Any distance</option>
+          </select>
+          <select name="type" class="type-filter">
+            <option value="any">Any category</option>
+          </select>
+        </div>
+        <div class="event-container">
+          <div class="event">
+            <img
+              src="assets/images/events/near/event-1x4.png"
+              alt="event_img"
+            />
+            <div class="event__content">
+              <p class="date">Mon, Mar 18 · 7:00 PM PDT</p>
+              <h3>All Nations - Manhattan Missions Church Bible Study</h3>
+              <p class="distance">Business (5 km)</p>
+              <div>
+                <div class="attendees">99 attendees</div>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <img
+              src="assets/images/events/near/event-1x4.png"
+              alt="event_img"
+            />
+            <div class="event__content">
+              <p class="date">Mon, Mar 18 · 7:00 PM PDT</p>
+              <h3>Day Trading Idea and Strategy</h3>
+              <p class="distance">Business (5 km)</p>
+              <div>
+                <div class="going">99 attendees</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <a href="#">Find events near</a>
+        <h2>New York, NY</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193596.00926283043!2d-74.14448375693838!3d40.69737092625127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sde!4v1722026870345!5m2!1sen!2sde"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-container__header">
+          <h3>Create your own Meetup group.</h3>
+          <button>Get Started</button>
+        </div>
+        <div class="nav-panel">
+          <ul class="list">
+            <li class="list__title">Your Account</li>
+            <li class="list__element">Sign up</li>
+            <li class="list__element">Log in</li>
+            <li class="list__element">Help</li>
+            <li class="list__element">Become an Affiliate</li>
+          </ul>
+          <ul class="list">
+            <li class="list__title">Discover</li>
+            <li class="list__element">Groups</li>
+            <li class="list__element">Calendar</li>
+            <li class="list__element">Topics</li>
+            <li class="list__element">Cities</li>
+            <li class="list__element">Online Events</li>
+            <li class="list__element">Local Guides</li>
+            <li class="list__element">Make Friends</li>
+          </ul>
+          <ul class="list">
+            <li class="list__title">Meetup</li>
+            <li class="list__element">About</li>
+            <li class="list__element">Blog</li>
+            <li class="list__element">Meetup Pro</li>
+            <li class="list__element">Careers</li>
+            <li class="list__element">Apps</li>
+            <li class="list__element">Podcast</li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <h3>Follow us</h3>
+          <div class="media-links">
+            <div class="social-media__links">
+              <img src="assets/icons/footer/facebook.svg" alt="" />
+              <img src="assets/icons/footer/twitter.svg" alt="" />
+              <img src="assets/icons/footer/youtube.svg" alt="" />
+              <img src="assets/icons/footer/insta.svg" alt="" />
+              <img src="assets/icons/footer/tiktok.svg" alt="" />
+            </div>
+            <div class="market-place">
+              <img src="assets/images/footer/google_play.png" alt="" />
+              <img src="assets/images/footer/app_store.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="terms-n-policy">
+          <p class="copyright">© 2024 Meetup</p>
+          <ul>
+            <li>Terms of Service</li>
+            <li>Privacy Policy</li>
+            <li>Do Not Sell or Share My Personal Data</li>
+            <li>Cookie Policy</li>
+            <li>Help</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="scripts/filter.js"></script>
+  </body>
+</html>
