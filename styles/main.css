@@ -35,7 +35,7 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 11px 50px 0px 15px;
+  padding: 11px 50px 0px 50px;
   gap: 40px;
 }
 
@@ -53,7 +53,7 @@ header {
     order: 2;
   }
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 1350px) {
   header {
     padding: 6px 12px;
   }
