@@ -88,17 +88,58 @@ function createEvent(event) {
   eventContainer.append(eventImg, eventContent);
   return eventContainer;
 }
+
 function renderEvent(events) {
   const eventContainer = document.querySelector(".event-container");
+  if (eventContainer.hasChildNodes) {
+    eventContainer.innerHTML = "";
+  }
   events.forEach((e) => {
     eventContainer.append(createEvent(e));
   });
 }
-function filterEvent() {}
+function getOptions() {
+  const type = document.querySelector(".type-filter");
+  const distance = document.querySelector(".distance-filter");
+  const category = document.querySelector(".category-filter");
+  const options = {
+    type: type.value,
+    distance: Number(distance.value) || "any",
+    category: category.value,
+  };
+  return options;
+}
+function filterEvents(options, events) {
+  const filteredEvents = events
+    .filter((e) => {
+      if (options.type === "any" || options.type === e.type) {
+        return true;
+      }
+    })
+    .filter((e) => {
+      if (options.distance === "any" || options.distance === e.distance) {
+        return true;
+      }
+    })
+    .filter((e) => {
+      if (options.category === "any" || options.category === e.category) {
+        return true;
+      }
+    });
+  return filteredEvents;
+}
 
 fillFilterOptions(typeSelector, getUniqueEventType(events));
 fillFilterOptions(distanceSelector, getUniqueDistance(events));
 fillFilterOptions(categorySelector, getUniqueCategory(events));
 
-console.log(formatDate(events[0].date));
 renderEvent(events);
+
+const selects = document.querySelectorAll("select");
+selects.forEach((e) => {
+  e.addEventListener("change", () => {
+    renderEvent(filterEvents(getOptions(), events));
+    console.log(filterEvents(getOptions(), events));
+    console.log(getOptions());
+  });
+});
