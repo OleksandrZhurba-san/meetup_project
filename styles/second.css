@@ -56,6 +56,14 @@ select {
   background-size: 10px;
   background-position: center right 15px;
 }
+.reset-filters {
+  color: #00798a;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: white;
+}
 .event-container {
   display: flex;
   flex-direction: column;
@@ -70,6 +78,7 @@ select {
   border-top: 1px solid #d9d9d9;
   width: 100%;
   height: auto;
+  transition: all 0.3s;
 }
 .event > img {
   width: 159px;
@@ -102,4 +111,17 @@ select {
   font-weight: 500;
   line-height: 20px;
   color: #7c6f50;
+}
+.no-events {
+  display: none;
+  flex-direction: column;
+}
+.no-events > img {
+  width: 150;
+  height: 142px;
+}
+.no-events > h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 }

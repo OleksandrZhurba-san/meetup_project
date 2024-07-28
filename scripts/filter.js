@@ -94,6 +94,11 @@ function renderEvent(events) {
   if (eventContainer.hasChildNodes) {
     eventContainer.innerHTML = "";
   }
+  if (events.length === 0) {
+    document.querySelector(".no-events").style.display = "flex";
+  } else {
+    document.querySelector(".no-events").style.display = "none";
+  }
   events.forEach((e) => {
     eventContainer.append(createEvent(e));
   });
@@ -141,5 +146,13 @@ selects.forEach((e) => {
     renderEvent(filterEvents(getOptions(), events));
     console.log(filterEvents(getOptions(), events));
     console.log(getOptions());
+  });
+});
+
+const resetFilterBtn = document.querySelector(".reset-filters");
+resetFilterBtn.addEventListener("click", () => {
+  selects.forEach((e) => {
+    e.selectedIndex = 0;
+    renderEvent(filterEvents(getOptions(), events));
   });
 });

@@ -93,6 +93,16 @@ export const eventsStore = [
     date: new Date(2024, 2, 14, 11),
     image:
       "https://plus.unsplash.com/premium_photo-1679488248784-65a638a3d3fc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    type: "online",
+    category: "Health and Wellbeing",
+    distance: 15,
+  },
+  {
+    title: "All Nations - Manhattan Missions Church Bible Study",
+    description: "Manhattan Bible Study Meetup Group",
+    date: new Date(2024, 2, 14, 11),
+    image:
+      "https://plus.unsplash.com/premium_photo-1679488248784-65a638a3d3fc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     type: "offline",
     category: "Health and Wellbeing",
     distance: 10,
