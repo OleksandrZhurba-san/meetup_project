@@ -144,8 +144,6 @@ const selects = document.querySelectorAll("select");
 selects.forEach((e) => {
   e.addEventListener("change", () => {
     renderEvent(filterEvents(getOptions(), events));
-    console.log(filterEvents(getOptions(), events));
-    console.log(getOptions());
   });
 });
 
